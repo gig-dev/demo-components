@@ -1,0 +1,8 @@
+repo:
+  name: demo
+  human_name: Demo Official
+  url: https://github.com/gig-dev/demo-components.git
+maintainer:
+  name: Dev
+  email: hello@dev.io
+  url: dev.io
