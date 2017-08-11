@@ -18,5 +18,4 @@ install_commands:
 exec_commands:
   - jupyter notebook --ip=0.0.0.0 --NotebookApp.token='' --no-browser
 exposed_tcp_ports:
-  - 8000
   - 8888
