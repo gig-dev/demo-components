@@ -1,0 +1,16 @@
+info:
+  name: python3-spacy
+  human_name: spaCy
+  description: "spaCy natural languange processing library for Python3"
+  version_major: 1
+  version_minor: 0
+  tags: ["ubuntu", "python", "python3", "nlp", "natural language procesing"]
+  icon: ""
+os_base_class: all
+author:
+  name: Dean Kleissas
+  email: dean@gigantum.io
+  username: dean
+  organization: Gigantum
+docker: |
+  RUN pip3 install -U spacy; python3 -m spacy download en
