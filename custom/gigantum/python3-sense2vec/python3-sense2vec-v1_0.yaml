@@ -1,0 +1,21 @@
+info:
+  name: python3-sense2vec
+  human_name: sense2vec
+  description: "An extension to word2vec for polysemy disambiguation"
+  version_major: 1
+  version_minor: 0
+  tags: ["ubuntu", "nlp", "natural language procesing", "word embedding", "word2vec"]
+  icon: ""
+os_base_class: ubuntu
+author:
+  name: Dean Kleissas
+  email: dean@gigantum.io
+  username: dean
+  organization: Gigantum
+docker: |
+  RUN mkdir -p /opt/build/ && \
+  cd /opt/build/ && \
+  git clone https://github.com/explosion/sense2vec.git && \
+  cd sense2vec && \
+  pip install -r requirements.txt && \
+  pip install -e .
