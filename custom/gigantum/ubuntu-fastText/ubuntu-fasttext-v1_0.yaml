@@ -1,0 +1,21 @@
+info:
+  name: ubuntu-fastText
+  human_name: fastText
+  description: "fastText is a library for efficient learning of word representations and sentence classification."
+  version_major: 1
+  version_minor: 0
+  tags: ["ubuntu", "nlp", "natural language procesing", "word embedding"]
+  icon: ""
+os_base_class: ubuntu
+author:
+  name: Dean Kleissas
+  email: dean@gigantum.io
+  username: dean
+  organization: Gigantum
+docker: |
+  RUN mkdir -p /opt/build/ && \
+  cd /opt/build/ && \
+  git clone https://github.com/facebookresearch/fastText.git && \
+  cd fastText && \
+  make && \
+  ln -s /opt/build/fastText/fasttext /usr/bin/fasttext
