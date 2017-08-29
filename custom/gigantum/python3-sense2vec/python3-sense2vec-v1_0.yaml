@@ -17,5 +17,5 @@ docker: |
   cd /opt/build/ && \
   git clone https://github.com/explosion/sense2vec.git && \
   cd sense2vec && \
-  pip install -r requirements.txt && \
-  pip install -e .
+  pip3 install -r requirements.txt && \
+  pip3 install -e .
