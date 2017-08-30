@@ -19,5 +19,5 @@ docker: |
   cd sense2vec && \
   pip3 install -r requirements.txt && \
   pip3 install -e . && \
-  python3 -m spacy.en.download . && \
+  python3 -m spacy.en.download && \
   chmod 777 /usr/local/lib/python3.5/dist-packages/spacy
