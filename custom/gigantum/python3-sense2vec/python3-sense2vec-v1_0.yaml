@@ -19,3 +19,4 @@ docker: |
   cd sense2vec && \
   pip3 install -r requirements.txt && \
   pip3 install -e .
+  python3 -m spacy download en
