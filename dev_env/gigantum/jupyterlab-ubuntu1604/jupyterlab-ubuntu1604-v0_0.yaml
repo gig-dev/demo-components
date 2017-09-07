@@ -14,7 +14,7 @@ author:
 os_base_class: ubuntu
 development_environment_class: web
 install_commands:
-  - pip3 install jupyter jupterlab
+  - pip3 install jupyter jupyterlab
   - jupyter serverextension enable --py jupyterlab --sys-prefix
 exec_commands:
   - jupyter lab --ip=0.0.0.0 --NotebookApp.token='' --no-browser
