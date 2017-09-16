@@ -17,6 +17,6 @@ install_commands:
   - pip3 install jupyter jupyterlab
   - jupyter serverextension enable --py jupyterlab --sys-prefix
 exec_commands:
-  - jupyter lab --ip=0.0.0.0 --NotebookApp.token='' --no-browser
+  - jupyter lab --ip=0.0.0.0 --NotebookApp.token='' --no-browser --ConnectionFileMixin.ip=0.0.0.0
 exposed_tcp_ports:
   - 8888
