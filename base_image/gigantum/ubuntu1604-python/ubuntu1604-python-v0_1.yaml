@@ -20,7 +20,7 @@ image:
   tag: 0d02e1c4-2017-10-04
 available_package_managers:
   - 
-    name: pip
+    name: pip2
     description: pip package manager for Python 2
     docker: RUN pip install $PKG$
   - 

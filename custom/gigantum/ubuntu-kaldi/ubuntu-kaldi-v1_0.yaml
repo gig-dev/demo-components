@@ -1,0 +1,22 @@
+info:
+  name: ubuntu-kaldi
+  human_name: Kaldi
+  description: "Kaldi is a toolkit for speech recognition written in C++"
+  version_major: 1
+  version_minor: 0
+  tags: ["ubuntu", "nlp", "natural language procesing", "word embedding", "word2vec"]
+  icon: ""
+os_base_class: ubuntu
+author:
+  name: Dean Kleissas
+  email: dean@gigantum.io
+  username: dean
+  organization: Gigantum
+docker: |
+  RUN mkdir -p /opt/build/ && \
+  cd /opt/build/ && \
+  git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream && \
+  cd kaldi && \
+  apt-get install -y zlib1g-dev automake autoconf wget libtool subversion libatlas3-base && \
+  cd tools && \
+  make -j 2
