@@ -14,4 +14,4 @@ author:
   organization: Gigantum
 docker: |
   RUN pip2 install ipython==5.5.0 ipykernel && \
-  python2 -m ipykernel install --user
+  python2 -m ipykernel install
