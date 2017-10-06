@@ -13,10 +13,17 @@ author:
   username: dean
   organization: Gigantum
 docker: |
-  RUN mkdir -p /opt/build/ && \
-  cd /opt/build/ && \
-  git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream && \
-  cd kaldi && \
-  apt-get install -y zlib1g-dev automake autoconf wget libtool subversion libatlas3-base && \
-  cd tools && \
-  make -j 2
+ RUN mkdir -p /opt/build/ && \
+ cd /opt/build/ && \
+ git clone https://github.com/kaldi-asr/kaldi.git kaldi --origin upstream && \
+ cd kaldi && \
+ apt-get install -y zlib1g-dev automake autoconf wget libtool subversion libatlas3-base && \
+ cd tools && \
+ make -j 2
+ 
+ RUN cd /opt/build/kaldi/src && \
+ ./configure --shared && \
+ make depend -j 3 && \
+ make -j 2
+ 
+ RUN echo "export KALDI_ROOT=/opt/build/kaldi" > /etc/profile.d/kaldi.sh
