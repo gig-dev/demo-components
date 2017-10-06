@@ -23,7 +23,7 @@ docker: |
  
  RUN cd /opt/build/kaldi/src && \
  ./configure --shared && \
- make depend -j 3 && \
+ make depend -j 2 && \
  make -j 2
  
  RUN echo "export KALDI_ROOT=/opt/build/kaldi" > /etc/profile.d/kaldi.sh
