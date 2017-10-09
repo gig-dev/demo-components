@@ -26,4 +26,4 @@ docker: |
  make depend -j 2 && \
  make -j 2
  
- RUN echo "export KALDI_ROOT=/opt/build/kaldi" > /etc/profile.d/kaldi.sh
+ ENV KALDI_ROOT "/opt/build/kaldi"
